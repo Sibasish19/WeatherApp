@@ -19,7 +19,7 @@ class UI {
         this.location.textContent = `${weather.name}, ${weather.sys.country}`;
         this.coordinates.textContent = `(Lat: ${weather.coord.lat}, Lon: ${weather.coord.lon})`;
         this.string.textContent = convertTemp(weather.main.temp);
-        this.icon.setAttribute('src', `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
+        this.icon.setAttribute('src', `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
         this.desc.textContent = weather.weather[0].description;
         changeBgColor(weather.name);
 

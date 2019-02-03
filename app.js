@@ -39,7 +39,7 @@ function getWeather() {
         .catch(() => {
             //Error message
             ui.showAlert('Please select a valid city!', 'error');
-            //Set "" to local storage
-            storage.setLocationData("");
+            //Set last selected location to local storage
+            storage.setLocationData(weatherLocation);
         });
 }
