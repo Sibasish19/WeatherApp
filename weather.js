@@ -7,7 +7,7 @@ class Weather {
     //Fetch weather from API
     getWeather() {
         return new Promise((resolve, reject) => {
-            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${this.apiKey}`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${this.apiKey}`)
                 .then(response => response.json())
                 .then(data => resolve(data))
                 .catch(err => reject(err));
