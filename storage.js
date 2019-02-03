@@ -5,7 +5,7 @@ class Storage {
     }
 
     getLocationData() {
-        if (localStorage.getItem('city') === "") {
+        if (localStorage.getItem('city') === "" || localStorage.getItem('city') === null) {
             this.city = this.defaultCity;
         } else {
             this.city = localStorage.getItem('city');
