@@ -40,6 +40,6 @@ function getWeather() {
             //Error message
             ui.showAlert('Please select a valid city!', 'error');
             //Set last selected location to local storage
-            storage.setLocationData(weatherLocation);
+            storage.setLocationData(weatherLocation.city);
         });
 }
