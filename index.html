@@ -46,9 +46,14 @@
             <div class="modal-body">
                 <form id="w-form">
                     <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="form-control" onchange="getSelectedVal()">
+                          <option value="">Select a country</option>
+                        </select>
                         <label for="city">City</label>
-                        <input type="text" id="city" class="form-control">
+                        <input type="text" id="city" class="form-control" autocomplete="off" >
                     </div>
+                    <div id="match-list"></div>
                 </form>
             </div>
             <div class="modal-footer">

@@ -14,6 +14,16 @@ class Weather {
         });
     }
 
+    //Fetch city names from local JSON file
+    getCities() {
+        return new Promise((resolve, reject) => {
+            fetch('./data.json')
+                .then(response => response.json())
+                .then(data => resolve(data))
+                .catch(err => reject(err));
+        });
+    }
+
     //Change the location
     changeLocation(city) {
         this.city = city;
